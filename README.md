@@ -1,1 +1,1 @@
-# thearunkarthik.tmphotography.github.io
+tmphotography.github.io
