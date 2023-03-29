@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TM Photography</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+	<nav>
+		<div class="logo">
+			TM <span>Photography</span>
+		</div>
+		<div class="menu">
+			<a href="#">Home</a>
+			<a href="album/index.php">TM Frames</a>
+			<a href="#">Gallery</a>
+			<a href="https://api.whatsapp.com/message/3EEPKMIGMY4KK1?autoload=1&app_absent=0"target="_blank">Contact</a>
+			<a href="#">About</a>
+		
+	</nav>
+
+
+	<section class="h-text">
+		<i class="fa fa-camera" id="camera"></i>
+		<h1 data-aos="zoom-in-down" data-aos-delay="100">Capturing the moments that captivate your heart.</h1>
+		<button type="button" class="btn btn-primary btn-lg">Book your slot</button>
+		
+	</section>
+</header>
+
+<section class="filter-gallery">
+	<div class="portfolio-menu">
+			<ul>
+				<li class="active" data-filter="*"> All</li>
+				<li data-filter=".Wedding"> Wedding Photography</li>
+				<li data-filter=".Baby">Baby Photography</li>
+				<li data-filter=".Product">Product Photography</li>
+			</ul>
+		</div>
+		<div class="portfolio-item">
+			<div class="item Wedding"  data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+				<img src="img/p1.jpg" width="100" height="100">
+			</div>
+
+			<div class="item Baby"  data-aos="flip-left" data-aos-offset="100" data-aos-delay="200">
+				<img src="img/p2.jpg" width="100" height="100">
+			</div>
+			<div class="item Product"  data-aos="flip-left" data-aos-offset="100" data-aos-delay="300">
+				<img src="img/p3.jpg" width="100" height="100">
+			</div>
+			<div class="item Wedding" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+				<img src="img/p4.jpg" width="100" height="100">
+			</div>
+
+			<div class="item Baby" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="200">
+				<img src="img/p5.jpg" width="100" height="100">
+			</div>
+			<div class="item Baby" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="300">
+				<img src="img/p6.jpg" width="100" height="100">
+			</div>
+			<div class="item Product" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100">
+				<img src="img/p7.jpg" width="100" height="100">
+			</div>
+			<div class="item Product" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="200">
+				<img src="img/p8.jpg" width="100" height="100">
+			</div>
+			<div class="item Product" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="300">
+				<img src="img/p9.jpg" width="100" height="100">
+			</div>
+		</div>
+	
+</section>
+
+
+<!--- filter gallery end---->
+
+<!-- slider start--->
+
+
+
+<footer>
+	<div class="newsletter">
+		<div data-aos="fade-up" data-aos-offset="200">
+			<h2>"In the world of photography, you get to share a captured moment with other people."</h2>
+			<p>We’re doing all events photography in chennai</p>
+		</div>
+		<div class="n-text" data-aos="fade-up-right" data-aos-offset="200">
+			<label>
+				<input type="text" name="" placeholder="Book your slot">
+	
+
+			</label>
+		</div>
+	</div>	
+
+
+	<div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+		<div>
+			<h1>Take Memory</h1>
+			<p>Photography is the pause button of life.</p>
+			
+			<a class="fa fa-whatsapp" href="https://api.whatsapp.com/message/3EEPKMIGMY4KK1?autoload=1&app_absent=0" target="_blank"></a>
+			<a class="fa fa-instagram" href="https://instagram.com/passion_tphotography?igshid=YmMyMTA2M2Y=" target="_blank"></a>
+
+		
+		</div>
+
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+	$('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+		$('.portfolio-menu ul li').click(function(){
+		$('.portfolio-menu ul li').removeClass('active');
+		$(this).addClass('active');
+
+			var selector = $(this).attr('data-filter');
+		$('.portfolio-item').isotope({
+			filter:selector
+		});
+		return false;
+	});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+</script>
+</body>
+</html>
